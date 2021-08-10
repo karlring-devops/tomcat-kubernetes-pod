@@ -21,13 +21,13 @@ kstat(){
 }
 
 main(){
-  echo -n "Enter action (create/destroy): "
-  read VAR
+  #echo -n "Enter action (create/destroy): "
+  #read VAR
 
-  if [[ $VAR == "create" ]] ; then
+  if [[ ${VAR} == "create" ]] ; then
     kcr8tomcat
     kstat
-  elif [[ $VAR == "destroy" ]] ; then
+  elif [[ ${VAR} == "destroy" ]] ; then
     kdeltomcat
     kstat
   else
@@ -35,4 +35,5 @@ main(){
   fi
 }
 
+VAR="${1}"
 main
