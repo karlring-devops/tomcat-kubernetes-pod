@@ -16,6 +16,10 @@ kdeltomcat(){
   kubectl delete namespace tomcat
 }
 
+kstat(){
+  watch kubectl get pods,svc,nodes,rc,rs,pv,pvc -n tomcat
+}
+
 main(){
   echo -n "Enter action (create/destroy): "
   read VAR
