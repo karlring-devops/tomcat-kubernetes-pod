@@ -9,6 +9,7 @@ Instructions:
 4. cd tomcat-kubernetes-pod
 
 . ./k8s_tomcat.sh create      #/--- creates all objects
+
 . ./k8s_tomcat.sh destroy     #/--- destroys all objects
 
 
